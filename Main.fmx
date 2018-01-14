@@ -1,0 +1,232 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 609
+  ClientWidth = 591
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object TabControl1: TTabControl
+    Align = Client
+    FullSize = True
+    Size.Width = 591.000000000000000000
+    Size.Height = 609.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 1
+    TabOrder = 0
+    TabPosition = PlatformDefault
+    Sizes = (
+      591s
+      560s
+      591s
+      560s)
+    object ListaTab: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 295.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'ListaTab'
+      ExplicitSize.cx = 296.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object ListView1: TListView
+        Touch.GestureManager = GestureManager1
+        OnGesture = ListView1Gesture
+        ItemAppearanceClassName = 'TListItemAppearance'
+        ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+        HeaderAppearanceClassName = 'TListHeaderObjects'
+        FooterAppearanceClassName = 'TListHeaderObjects'
+        Align = Client
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 10.000000000000000000
+        Size.Width = 571.000000000000000000
+        Size.Height = 377.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        OnClick = ListView1Click
+        OnItemClickEx = ListView1ItemClickEx
+        ControlType = Platform
+      end
+      object ToolBar1: TToolBar
+        Size.Width = 591.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object AboutBtn: TSpeedButton
+          Align = Right
+          Position.X = 431.000000000000000000
+          Size.Width = 80.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'About'
+          OnClick = AboutBtnClick
+        end
+        object EstraiBmp: TSpeedButton
+          Align = Right
+          Position.X = 511.000000000000000000
+          Size.Width = 80.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'EstraiBmp'
+          OnClick = EstraiBmpClick
+        end
+      end
+      object Label1: TLabel
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 58.000000000000000000
+        Size.Width = 571.000000000000000000
+        Size.Height = 95.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.VertAlign = Leading
+        Text = 'Cerca'
+        TabOrder = 2
+        object Edit1: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Bottom
+          TabOrder = 0
+          Position.Y = 63.000000000000000000
+          Size.Width = 571.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          object SpeedButton1: TSpeedButton
+            Align = Right
+            Position.X = 523.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'searchtoolbutton'
+            Text = 'SpeedButton1'
+            OnClick = SpeedButton1Click
+          end
+        end
+      end
+    end
+    object DettaglioTab: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 296.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'DettaglioTab'
+      ExplicitSize.cx = 295.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object ToolBar2: TToolBar
+        Size.Width = 591.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object SpeedButton2: TSpeedButton
+          Align = Left
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'priortoolbutton'
+          Text = 'SpeedButton2'
+          OnClick = SpeedButton2Click
+        end
+      end
+      object Label2: TLabel
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 58.000000000000000000
+        Size.Width = 571.000000000000000000
+        Size.Height = 71.000000000000000000
+        Size.PlatformDefault = False
+        Text = '...'
+        TabOrder = 1
+      end
+      object BitmapAnimation1: TBitmapAnimation
+        Duration = 0.200000002980232200
+      end
+      object Image1: TImage
+        MultiResBitmap = <
+          item
+          end>
+        Align = Client
+        Size.Width = 591.000000000000000000
+        Size.Height = 421.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+  end
+  object ActionList1: TActionList
+    Left = 472
+    Top = 176
+    object ChangeTabAction1: TChangeTabAction
+      Tab = DettaglioTab
+    end
+    object ChangeTabAction2: TChangeTabAction
+      Tab = ListaTab
+    end
+  end
+  object GestureManager1: TGestureManager
+    Sensitivity = 80.000000000000000000
+    Left = 472
+    Top = 104
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=D:\SES\DelphiXE\temp\TestSqLite4\Materiale.s3db'
+      'DriverID=SQLite')
+    LoginPrompt = False
+    Left = 498
+    Top = 416
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'FMX'
+    Left = 498
+    Top = 478
+  end
+  object FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink
+    Left = 498
+    Top = 542
+  end
+  object FDQuery1: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'select * from materiale')
+    Left = 232
+    Top = 144
+    object FDQuery1id: TIntegerField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object FDQuery1des: TStringField
+      FieldName = 'des'
+      Origin = 'des'
+      Size = 50
+    end
+    object FDQuery1JpgImage: TBlobField
+      FieldName = 'JpgImage'
+      Origin = 'JpgImage'
+    end
+    object FDQuery1BmpImage: TBlobField
+      FieldName = 'BmpImage'
+      Origin = 'BmpImage'
+    end
+  end
+end
